@@ -1,0 +1,24 @@
+<template>
+	<div class="website-wrapper">
+		<div class="m-auto overflow-hidden h-screen xl:(w-7xl)">
+			<Navbar />
+			<main class="flex gap-6 md:(gap-20)">
+				<div
+					class="mt-4 flex flex-col gap-10 overflow-auto h-[88vh] flex-1 videos"
+				>
+					<slot />
+				</div>
+			</main>
+		</div>
+	</div>
+</template>
+
+<script setup lang="ts"></script>
+
+<style lang="scss" scoped>
+	.website-wrapper > div {
+		min-height: 100vh;
+		display: grid;
+		grid-template-rows: min-content 1fr min-content;
+	}
+</style>
